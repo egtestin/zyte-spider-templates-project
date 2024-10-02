@@ -3,13 +3,13 @@ from zyte_common_items import ZyteItemAdapter
 
 ItemAdapter.ADAPTER_CLASSES.appendleft(ZyteItemAdapter)
 
-BOT_NAME = "zyte_spider_templates_project"
+BOT_NAME = "flatish"
 
 SPIDER_MODULES = [
     "zyte_spider_templates.spiders",
-    "zyte_spider_templates_project.spiders",
+    "flatish.spiders",
 ]
-NEWSPIDER_MODULE = "zyte_spider_templates_project.spiders"
+NEWSPIDER_MODULE = "flatish.spiders"
 
 CLOSESPIDER_TIMEOUT_NO_ITEM = 900
 ADDONS = {
@@ -28,21 +28,20 @@ SPIDER_MIDDLEWARES = {
 # scrapy-poet
 SCRAPY_POET_DISCOVER = [
     "zyte_spider_templates.pages",
-    "zyte_spider_templates_project.pages",
+    "flatish.pages",
 ]
 
 # duplicate-url-discarder
 DUD_ATTRIBUTES_PER_ITEM = {
     "zyte_common_items.Product": [
-        "canonicalUrl",
-        "brand",
-        "name",
-        "gtin",
-        "mpn",
-        "productId",
-        "sku",
-        "color",
-        "size",
-        "style"
+        "www",
+        "id",
+        "area",
+        "rooms",
+        "floor",
+        "price",
+        "balcony",
+        "orientation",
+        "status",
     ],
 }
